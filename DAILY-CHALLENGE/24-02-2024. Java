@@ -1,0 +1,27 @@
+import java.util.*;
+public class Hello {
+    public static boolean mirrorImage(String[] s1,String[] s2,int n){
+        int i=0,j=n-1,c=0;
+        while(i<n){
+            if((s1[i].equals(s2[j]))){
+              c++;
+            } 
+            i++;
+            j--;
+        }
+        if(c==n) return true;
+        return false;
+    }
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		sc.nextLine();
+		String s1[]=sc.nextLine().split(" ");
+		String s2[]=sc.nextLine().split(" ");
+		if(mirrorImage(s1,s2,n)){
+		    System.out.println("1");
+		}else{
+		    System.out.println("0");
+		}
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		char c[]=sc.next().toCharArray();
+		Arrays.sort(c);
+		int n=c.length;
+		if(((int)c[1]-(int)c[0]!=(int)c[2]-(int)c[1]) &&
+		   ((int)c[2]-(int)c[1]==(int)c[3]-(int)c[2])){
+		       System.out.println(c[0]);
+		}else if(((int)c[n-1]-(int)c[n-2]!=(int)c[n-2]-(int)c[n-3])&&((int)c[n-2]-(int)c[n-3]==(int)c[n-3]-(int)c[n-4])){
+		    System.out.println(c[n-1]);
+		}else{
+		    int v=c[1]-c[0];
+		    for(int i=2;i<c.length;i++){
+		        if((int)c[i]-(int)c[i-1]!=v){
+		            System.out.println(c[i]);
+		            break;
+		        }
+		    }
+		}
+	}
+}
