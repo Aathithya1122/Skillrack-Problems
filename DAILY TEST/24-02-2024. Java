@@ -1,0 +1,22 @@
+import java.util.*;
+public class Hello {
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		String k=sc.next();
+		int n=k.length(),c=0;
+		String s="",v="";
+		for(;x<=y;x++){
+		    s=String.valueOf(x);
+		    for(int i=0;i<=s.length()-n;i++){
+		        v=s.substring(i,i+n);
+		        if(v.equals(k)){
+		            c++;
+		            break;
+		        }
+		    }
+		}
+		System.out.println(c);
+	}
+}

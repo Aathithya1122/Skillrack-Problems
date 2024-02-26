@@ -1,0 +1,26 @@
+import java.util.*;
+public class Hello {
+    public static boolean checkUpperCase(String s1,String s2){
+        String s=s1+s2;
+	List<Character> list=new ArrayList<>();
+	for(int i=0;i<s.length();i++){
+            if(list.contains(s.charAt(i)) || Character.isLowerCase(s.charAt(i))){
+                return false;
+	    }else{
+                list.add(s.charAt(i));
+            }
+        }
+        if(list.size()!=26) return false;
+        return true;
+    }
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		String s2=sc.next();
+		if(checkUpperCase(s1,s2)){
+		    System.out.println("yes");
+		}else{
+		    System.out.println("no");
+		}
+	}
+}

@@ -1,0 +1,45 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long n=sc.nextLong();
+		long l=0,v=0;
+		while(n!=0){
+		    if(n>=1000){
+		        l=n/1000;
+		        v+=l;
+		        n-=l*1000;
+		    }else if(n>=500){
+		        l=n/500;
+		        v+=l;
+		        n-=l*500;
+		    }else if(n>=100){
+		        l=n/100;
+		        v+=l;
+		        n-=l*100;
+		    }else if(n>=50){
+		        l=n/50;
+		        v+=l;
+		        n-=l*50;
+		    }else if(n>=20){
+		        l=n/20;
+		        v+=l;
+		        n-=l*20;
+		    }else if(n>=10){
+		        l=n/10;
+		        v+=l;
+		        n-=l*10;
+		    }else if(n>=5){
+		        l=n/5;
+		        v+=l;
+		        n-=l*5;
+		    }else{
+		        l=n/1;
+		        v+=l;
+		        n-=l*1;
+		    }
+		}
+		System.out.println(v);
+	}
+}

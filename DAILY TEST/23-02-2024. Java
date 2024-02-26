@@ -1,0 +1,19 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long val=1,n=1;
+		int k=sc.nextInt();
+		while(k-->0){
+		    val*=n;
+		    n++;
+		    val*=n;
+		    n++;
+		    val*=n;
+		    n++;
+		    System.out.print(val+" ");
+		    val=1;
+		}
+	}
+}
