@@ -1,0 +1,23 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Set<String> set=new TreeSet<>();
+		while(n-->0){
+		    Set<Character> st=new TreeSet<>();
+		    String s=sc.next();
+		    for(int i=0;i<s.length();i++){
+		        st.add(s.charAt(i));
+		    }
+		    List<Character> l=new ArrayList<>(st);
+		    String str="";
+		    for(int i=0;i<l.size();i++){
+		        str+=l.get(i);
+		    }
+		    set.add(str);
+		}
+		System.out.println(set.size());
+	}
+}
